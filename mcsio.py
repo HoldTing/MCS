@@ -5,7 +5,7 @@ import http.client as http
 import time
 import json
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(24, GPIO.IN,pull_up_down=GPIO.PDU_DOWN)
+GPIO.setup(24,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 deviceId="DtuolCRG"
 deviceKey="Nb4jPQ9jvwmYz6gF"
 def post_to_mcs(payload):
