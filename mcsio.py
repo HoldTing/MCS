@@ -28,7 +28,7 @@ def post_to_mcs(payload):
 
 while True:
 	SwitchStatus=GPIO.input(24)
-	payload = {"datapoints":[{"dataChnId":"Hum","values":{"value":humidity}},{"dataChnId":"Temp","values":{"value":temperature}},{"dataChnId":"SwitchStatus","values":{"value":SwitchStaues}}]}
+	payload = {"datapoints":[{"dataChnId":"SwitchStatus","values":{"value":SwitchStatus}}]}
 	if(SwitchStatus == 0):
 		print('Button pressed')
 	else:
