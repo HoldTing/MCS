@@ -6,8 +6,8 @@ import mraa
 
 # change this to the values from MCS web console
 DEVICE_INFO = {
-    'device_id' : 'YOUR_DEVICE_ID',
-    'device_key' : 'YOUR_DEVICE_KEY'
+    'device_id' : 'DtuolCRG',
+    'device_key' : 'Nb4jPQ9jvwmYz6gF'
 }
 
 # change 'INFO' to 'WARNING' to filter info messages
@@ -54,7 +54,7 @@ def waitAndExecuteCommand(commandChannel):
 
         if len(fields) > 1:
             timeStamp, dataChannelId, commandString = fields
-            if dataChannelId == 'LED_Control':
+            if dataChannelId == 'LEDControl':
                 # check the value - it's either 0 or 1
                 commandValue = int(commandString)
                 logging.info("led :%d" % commandValue)
